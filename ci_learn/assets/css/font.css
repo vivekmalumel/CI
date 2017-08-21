@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Planewalker';
+	src: url('../fonts/Planewalker.eot');
+	src: local('Planewalker'), url('../fonts/Planewalker.woff') format('woff'), url('../fonts/Planewalker.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'cobaltaliensuperital';
+	src: url('../fonts/cobaltaliensuperital.eot');
+	src: local('cobaltaliensuperital'), url('../fonts/cobaltaliensuperital.woff') format('woff'), url('../fonts/cobaltaliensuperital.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'klavikaboldwebfont';
+	src: url('../fonts/klavikaboldwebfont.eot');
+	src: local('klavikaboldwebfont'), url('../fonts/klavikaboldwebfont.woff') format('woff'), url('../fonts/klavikaboldwebfont.ttf') format('truetype');
+}

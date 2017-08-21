@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'TT1023M';
+	src: url('./TT1023M.eot');
+	src: local('TT1023M'), url('./TT1023M.woff') format('woff'), url('./TT1023M.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_71949">Text with this font applied</p> */
+.fontsforweb_fontid_71949 {
+	font-family: 'TT1023M' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
