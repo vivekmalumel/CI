@@ -38,6 +38,8 @@ form#admin_login {
     background: #355c8f;
     padding: 10px 0;
     margin: auto;
+    position: fixed;
+    z-index: 999;
 }
 a.logout_link {
     float: right;
@@ -142,6 +144,7 @@ ul.submenu > li > a{
     margin-left: 160px;
     margin-top: 0;
     padding: 15px 15px;
+    padding-top: 80px;
 }
 a:not([href]):not([tabindex]) {
     color: #fff;
@@ -164,8 +167,8 @@ li.menu_item.active > a,li.menu_item:hover > a {
     padding: 10px 0;
 }
 .slider-image-block {
-    height: 150px;
-    width: 250px;
+    height: 130px;
+    width: 200px;
 }
 a.set-slider-image {
     color: blue!important;
@@ -173,4 +176,177 @@ a.set-slider-image {
     font-family: cursive;
     text-align: center;
     width: 100%;
+}
+
+label.img-select > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label.img-select > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label.img-select > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
+.image_selector-container {
+    border: 1px solid #c4b9b9;
+    padding: 5px 5px;
+    min-height: 100px;
+}
+button#select_btn {
+    float: right;
+    margin: 4px 0;
+    display: none;
+    position: relative;
+    top: -37px;
+    right: 4px;
+    padding: 4px 23px;
+}
+.slider-image-block img {
+    max-width: 100%;
+    max-height: 100%;
+}
+label.img-select img {
+    height: auto;
+    max-width: 200px;
+    max-height: 130px;
+}
+.media_inner.container > .image_selector-container {
+    background: #fff;
+}
+
+
+
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  margin: 43px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  left: 0;
+   -webkit-transition: left 1.2s; /* Safari 3.1 to 6.0 */
+   transition: left 1.2s;
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #355c8f;;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+
+
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+/* Icon 3 */
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.page_content label{
+     font-family: 'klavikaboldwebfont';
+    font-size: 15px;
+    color: #6c6666;
+}
+.page_content .btn {
+    font-size: 16px;
+    font-family: klavikaboldwebfont;
+    text-transform: uppercase;
+}
+.page_content input#title {
+    font-weight: 800;
+}
+
+
+
+@media(max-width:767px){
+
+    .admin_side_bar{
+        left: -160px;
+        -webkit-transition: left 1s; /* Safari 3.1 to 6.0 */
+        transition: left 1s;
+    }
+
+    .page_content {
+        margin-left: 0;
+        -webkit-transition: left 1s; /* Safari 3.1 to 6.0 */
+        transition: left 1s;
+
+    }
+
+    .move_right{
+        margin-left: 160px;
+        -webkit-transition: margin-left 1s; /* Safari 3.1 to 6.0 */
+        transition: margin-left 1s;
+    }
+
+    .show_sidebar{
+
+        left: 0 !important;
+        -webkit-transition: left 1s; /* Safari 3.1 to 6.0 */
+        transition: left 1s;
+    }
+    .move_humberger{
+        left: 154px !important;
+        -webkit-transition: left 1.5s; /* Safari 3.1 to 6.0 */
+        transition: left 1.5s;
+    }
+
 }

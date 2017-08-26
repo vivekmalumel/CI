@@ -41,6 +41,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</li>
 			</ul>
 		</li>
+		<li class="menu_item <?php if($page === 'media') echo 'active';?> " id="media">
+		<a  href="<?php echo base_url('admin/page/media')?>">
+			<span class="material-icons">image</span>Media
+		</a>
+		</li>
 
 	</ul>
 </div>

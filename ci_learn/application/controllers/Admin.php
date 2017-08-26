@@ -5,7 +5,7 @@ class Admin extends CI_Controller{
 	function __construct(){
 		parent::__construct();
 		$this->load->library(array('form_validation','session'));
-		$this->load->helper(array('url','form'));
+		$this->load->helper(array('url','form','helper1'));
 		$this->load->database();
 	}
 	public function index(){
@@ -54,6 +54,10 @@ class Admin extends CI_Controller{
 			case 'slider':
 					$this->load->view('admin/admin_slider',array('page'=> $title));
 					break;
+			case 'media':
+					$this->load->view('admin/admin_media',array('page'=> $title));
+					break;
+
 			default:
 					$this->load->view('admin/admin_home',array('page' => ''));
 		}
@@ -62,6 +66,33 @@ class Admin extends CI_Controller{
 			$this->load->view('admin/login_form',array('error' => '' ));
 
 	}
+
+	function addSlider(){
+
+		$this->form_validation->set_rules('title', 'Title', 'required');
+		if($this->form_validation->run() == false)
+    	{
+        	$this->load->view('admin/admin_slider',array('page'=> 'slider'));
+    	}
+    	else{
+
+    		$data=array(
+    			'title' => $this->input->post('title'),
+    			'description' => $this->input->post('description'),
+    			'mediaId' => $this->input->post('media-id'),
+    			);
+    		if($this->db->insert('slider', $data)){
+    			echo "Success";
+    		}
+    	}
+		
+	}
+
+
+
+
+
+
 
 	public function logout(){
 		$this->session->sess_destroy();

@@ -45,4 +45,10 @@ $(document).ready(function(){
   		jQuery("#myModal").modal();
 	});
 
+	$('.modal-body .image_selector-container input[type="radio"]').click(function(){
+
+		$('#select_btn').css("display","unset");
+
+	});
+
   });
